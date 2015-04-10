@@ -17,13 +17,13 @@ start
 split
 {
 	var segment = timer.CurrentSplit.Name.ToLower();
-	if (current.roomNum == 45 && current.bossHealth > 2000000000 && (old.bossHealth > 0 && old.bossHealth < 2000000000))
+	if (current.roomNum == 45 && current.bossHealth > 2000000000 && (old.bossHealth > 0 && old.bossHealth < 2000000000) && timer.CurrentSplitIndex < (timer.Run.Count - 1))
 		return true;
 	
-	if (current.roomNum == 99 && current.bossHealth > 2000000000 && (old.bossHealth > 0 && old.bossHealth < 2000000000) && (segment == "blue" || segment.Contains("bubbles")))
+	if (current.roomNum == 99 && current.bossHealth > 2000000000 && (old.bossHealth > 0 && old.bossHealth < 2000000000) && timer.CurrentSplitIndex < (timer.Run.Count - 1))
 		return true;
 	
-	if (current.roomNum == 71 && current.bossHealth > 2000000000 && (old.bossHealth > 0 && old.bossHealth < 2000000000) && segment.Contains("mayo"))
+	if (current.roomNum == 71 && current.bossHealth > 2000000000 && (old.bossHealth > 0 && old.bossHealth < 2000000000) && timer.CurrentSplitIndex < (timer.Run.Count - 1))
 		return true;
 
 	if (current.roomNum == 95 && current.PhaseOne && current.bossHealth > 2000000000 && old.bossHealth < 2000000000)
